@@ -51,7 +51,7 @@ public abstract class Produto {
      * Retorna o valor de venda do produto, considerando seu preço de custo e margem de lucro.
      * @return Valor de venda do produto (double, positivo)
      */
-	public double valorDeVenda() {
+	public double valorVenda() {
 		return (precoCusto * (1.0 + margemLucro));
 	}
 	
@@ -65,6 +65,6 @@ public abstract class Produto {
     	
     	NumberFormat moeda = NumberFormat.getCurrencyInstance();
     	
-		return String.format("NOME: " + descricao + ": " + moeda.format(valorDeVenda()));
+		return String.format("NOME: " + descricao + ": " + moeda.format(valorVenda()));
 	}
 }

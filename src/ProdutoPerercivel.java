@@ -18,7 +18,7 @@ public class ProdutoPerercivel extends Produto{
     }
 
     @Override
-    public double ValorVenda() {
+    public double valorVenda() {
         double desconto = 0d;
         int diasValidade = LocalDate.now().until(dataDeValidade).getDays();
         if (diasValidade <= PRAZO_DESCONTO) {
