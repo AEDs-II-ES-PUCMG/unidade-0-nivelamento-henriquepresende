@@ -1,14 +1,13 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 
-public class ProdutoPerercivel extends Produto{
+public class ProdutoPerecivel extends Produto{
 
     private static final double DESCONTO = 0.25;
     private static final int PRAZO_DESCONTO = 7;
     private LocalDate dataDeValidade;
 
-    public ProdutoPerercivel(String desc, double precoCusto, double margemLucro, LocalDate validade){
+    public ProdutoPerecivel(String desc, double precoCusto, double margemLucro, LocalDate validade){
         super(desc, precoCusto, margemLucro);
 
         if(validade.isBefore(LocalDate.now())){
@@ -32,7 +31,7 @@ public class ProdutoPerercivel extends Produto{
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         String dados = super.toString();
-        dados += "/nVálido até " + formato.format(dataDeValidade);
+        dados += "\nVálido até " + formato.format(dataDeValidade);
         return dados;
     }
 }
