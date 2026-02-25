@@ -1,6 +1,6 @@
 import java.text.NumberFormat;
 
-public class Produto {
+public abstract class Produto {
 	
 	private static final double MARGEM_PADRAO = 0.2;
 	private String descricao;
