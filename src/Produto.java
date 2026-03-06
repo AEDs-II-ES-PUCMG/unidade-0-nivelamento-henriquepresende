@@ -73,6 +73,13 @@ public abstract class Produto {
         }
         return novoProduto;
     }
+
+    /**
+     * Gera uma linah de texto a partir dos dados do produto
+     * @return Uma string no formato "tipo; descrição;preçoDeCusto;margemDeLucro;[dataDeValidade]"
+     */
+    public abstract String gerarDadosTexto();
+
 	/**
      * Descrição, em string, do produto, contendo sua descrição e o valor de venda.
      *  @return String com o formato:
