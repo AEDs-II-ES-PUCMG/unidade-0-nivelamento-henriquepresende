@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 public class ProdutoPerecivel extends Produto{
 
@@ -33,6 +34,13 @@ public class ProdutoPerecivel extends Produto{
         String dados = super.toString();
         dados += "\nVálido até " + formato.format(dataDeValidade);
         return dados;
+    }
+
+    @Override
+    public String gerarDadosTexto(){
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String dataFormatada = dataDeValidade.format(formato);
+        return String.format(Locale.US, "2;%s;%.2f;%.2f;%s", descricao, precoCusto, margemLucro, dataFormatada);
     }
 }
 
