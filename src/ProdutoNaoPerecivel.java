@@ -17,6 +17,6 @@ public class ProdutoNaoPerecivel extends Produto {
 
     @Override
     public String gerarDadosTexto(){
-        return String.format(Locale.US, "1;%s.%.2f;%.2f", descricao, precoCusto, margemLucro);
+        return String.format(Locale.US, "1;%s;%.2f;%.2f", descricao, precoCusto, margemLucro);
     }
 }
